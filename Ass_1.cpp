@@ -1,26 +1,25 @@
-#include<iostream>
+#include <bits/stdc++.h>
 using namespace std;
-int main(){
-    int a[]={1,1,1,0,0},count=0;
-    int low=0;
-    int size=end(a)-begin(a);
-    int high=size-1;
-    int mid;
-    while(low<=high){
-        mid=(low+high)/2;
-        if(a[mid]==1){
-            low=mid+1;
-            
-        }
-        else{
-            high=mid-1;
-           
-        }
-      
-    }
-    for(int i=mid+1;i<=size;i++)
-        count++;
-
-    cout<<"no of zero's are :"<<count;
-    return 0;
+int firstzeroindex(int arr[], int n)
+{
+	for (int i = 0; i < n; i++) {
+		if (arr[i] == 0) {
+			return i;
+		}
+	}
+	return -1;
 }
+int main()
+{
+	int arr[] = { 1, 1, 1, 1, 1, s0, 0, 0, 0, 0, 0 };
+	int n = sizeof(arr) / sizeof(arr[0]);
+	int x = firstzeroindex(arr, n);
+	if (x == -1) {
+		cout << "Count of zero is 0" << endl;
+	}
+	else {
+		cout << "count of zero is " << n - x << endl;
+	}
+	return 0;
+}
+
